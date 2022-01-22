@@ -34,3 +34,18 @@
               ((and (<= b a) (<= b c)) (sum-of-squares a c))
               ((and (<= c a) (<= c b)) (sum-of-squares a b))))
 
+; 1.4
+; (define (a-plus-abs-b a b)
+;         ((if (> b 0) + -) a b))
+; if b is greater than 0, a + b, otherwise, a - b
+
+; 1.5
+; (define (p) (p))
+; (define (test x y)
+;         (if (= x 0)
+;              0
+;              y))
+;
+; (test 0 (p))
+; If using normal order, this will return 0, as p does not need to be evaluated.
+; If using applicative order, this will never evaluate as p will infinitely evaluate to itself.
